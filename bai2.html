@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+</head>
+<body>
+<script>
+    // Cho trước 1 mảng n phần tử
+    // Viết hàm cho phép đếm xem có bao nhiêu phần tử a ( a được nhập vào tử bàn phím)
+    let soPhanTu = parseInt(prompt(" Nhập số phần tử mảng: "));
+    let intNumber = new Array(soPhanTu);
+    for (let i = 0; i < intNumber.length; i++) {
+        intNumber[i] = Math.round(Math.random() * 100 + 1);// ran
+    }
+    document.write("Phần tử trong mảng: " + intNumber +"<br>");
+    let elenments = prompt("Nhập phần tử a: ")
+    function countElenment(element){
+        let count =0 ;
+        for (let i = 0; i < intNumber.length; i++) {
+            if(intNumber[i] === element){
+                count++;
+            }
+        }
+        return document.write("Số phần tử: " +element + " được nhập là từ bàn phím là: "+count)
+    }
+    countElenment(elenments);
+</script>
+</body>
+</html>

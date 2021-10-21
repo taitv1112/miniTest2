@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho trước 1 mảng bao gồm n phần tử
+    // Viết hàm tính tổng các số nguyên tố trong mảng.
+
+        let soPhanTu = parseInt(prompt(" Nhập số phần tử mảng: "));
+    let intNumber = new Array(soPhanTu);
+    for (let i = 0; i < intNumber.length; i++) {
+        intNumber[i] = Math.round(Math.random() * 100 + 1);// ran
+    }
+    document.write("Phần tử trong mảng: " + intNumber +"<br>");
+
+    function isPrime(a) {
+        let flag = true;
+        if(a<2){
+            flag = false;
+        }else {
+            for (let j = 2; j <= Math.sqrt(a); j++) {
+                if (a % j === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+    }
+    function sumPrimeInArray(arr){
+        let sum=0;
+        for (let i = 0; i < arr.length; i++) {
+            if(isPrime(arr[i])){
+                sum += arr[i]
+            }
+        }
+        return document.write("Tổng các số nguyên tố trong mảng là " +sum)
+    }
+    sumPrimeInArray(intNumber)
+</script>
+</body>
+</html>

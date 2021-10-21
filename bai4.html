@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     //Viết chương trình tính tổng các số nguyên tố nhỏ hơn 500
+     function isPrime(a) {
+         let flag = true;
+         if(a<2){
+             flag = false;
+         }else {
+             for (let j = 2; j <= Math.sqrt(a); j++) {
+                 if (a % j === 0) {
+                     flag = false;
+                     break;
+                 }
+             }
+             return flag;
+         }
+     }
+     function sumPrime(numbers){
+         let sum = 0;
+         for (let n = 2; n <= numbers; n++) {
+             if(isPrime(n)){
+                 sum += n;
+             }
+         }
+         return document.write("Tổng các số nguyên tố từ 0 đến" + numbers + " là "+ sum);
+     }
+sumPrime(500);
+ </script>
+</body>
+</html>

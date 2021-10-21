@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1:
+        Cho trước 1 mảng n phần tử
+        Viết hàm đếm in ra số lượng các số chẵn trong mảng
+    </title>
+</head>
+<body>
+<script>
+    let soPhanTu = parseInt(prompt(" Nhập số phần tử mảng: "));
+    let intNumber = new Array(soPhanTu);
+    for(let i=0;i<intNumber.length;i++){
+        intNumber[i] = Math.round(Math.random()*100+1);// ran
+    }
+    document.write("Phần tử trong mảng: "+intNumber);
+    function countEven(arr){
+        let count = 0;
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] %2 ===0){
+                count ++ ;
+                result.push(arr[i]);
+            }
+        }
+        return  document.write("<br>"+"Số phần tử chẵn trong mảng là: " + count + "<br>"+" Các phần tử đó là: " +result);
+    }
+    countEven(intNumber);
+</script>
+</body>
+</html>
